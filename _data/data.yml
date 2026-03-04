@@ -1,0 +1,133 @@
+sidebar:
+  about: False
+  education: True
+
+  name: Francisco Park
+  tagline: AI/ML Researcher
+  avatar: profile.png
+
+  # Sidebar links
+  email:
+  linkedin: jypark-3672b3201
+  github: FranciscoPark
+
+  languages:
+    title: Languages
+    info:
+      - idiom: Korean
+        level: Native
+      - idiom: English
+        level: Professional
+
+  interests:
+    title: Interests
+    info:
+      - item: Large Language Models
+      - item: Computer Vision
+      - item: Natural Language Processing
+      - item: Reinforcement Learning
+
+career-profile:
+  title: About
+  summary: |
+    AI/ML Researcher with hands-on experience in Computer Vision, Natural Language Processing,
+    Reinforcement Learning, and Generative AI. Focused on building and evaluating modern deep
+    learning systems — from pretraining data pipelines to benchmark design and model evaluation.
+
+education:
+  title: Education
+  info:
+    - degree: "[Your Degree — e.g. B.S. / M.S. in Computer Science]"
+      university: "[Your University]"
+      time: "[Start Year] - [End Year]"
+      details: |
+        [Add relevant coursework, thesis topic, or GPA if applicable.]
+
+experiences:
+  title: Experience
+  info:
+    - role: "[Your Role — e.g. Research Intern]"
+      time: "[Start] - [End]"
+      company: "[Company or Lab], [Location]"
+      details: |
+        [Describe your responsibilities and key contributions.]
+
+publications:
+  title: Publications
+  intro: |
+    Research in large language model evaluation, Korean NLP, and pretraining data quality.
+  papers:
+    - title: "Ko-MuSR: A Multistep Soft Reasoning Benchmark for LLMs Capable of Understanding Korean"
+      link: "https://arxiv.org/abs/2510.24150"
+      authors: Chanwoo Park, Suyoung Park, JiA Kang, Jongyeon Park, Sangho Kim, Hyunji M. Park, Sumin Bae, Mingyu Kang, Jaejin Lee
+      conference: "arXiv, 2025 — Korean multistep reasoning benchmark; multilingual models outperform Korean-specialized ones; prompting strategies significantly improve accuracy."
+
+    - title: "Beyond Line-Level Filtering for the Pretraining Corpora of LLMs"
+      link: "https://arxiv.org/abs/2510.24139"
+      authors: Chanwoo Park, Suyoung Park, Yelim Ahn, Jongmin Kim, Jongyeon Park, Jaejin Lee
+      conference: "arXiv, 2025 — Pattern-aware deduplication and punctuation filtering that preserve structurally valuable content and improve 1B-parameter LLM benchmark scores."
+
+    - title: "Models Know Models Best: Evaluation via Model-Preferred Formats"
+      link: "https://arxiv.org/abs/2601.22699"
+      authors: Joonhak Lee, Sungmok Jung, Jongyeon Park, Jaejin Lee
+      conference: "arXiv, 2026 — Dynamic symbol-vs-cloze format selection for multiple-choice LLM evaluation using a lightweight classifier; consistent gains across reasoning and knowledge benchmarks."
+
+projects:
+  title: Projects
+  intro: >
+    Selected projects in Computer Vision, NLP, Reinforcement Learning, and Generative AI.
+  assignments:
+    - title: "SurAI — Tennis Court Detection"
+      link: "https://github.com/FranciscoPark/SurAI"
+      tagline: "Amateur tennis court and ball detection using YOLOv8 and PyTorch. Includes 2NN, CNN, KNN, RNN, Seq2Seq, and ViT implementations."
+
+    - title: "Style Transfer CNN"
+      link: "https://github.com/FranciscoPark/DS_Portfolio/blob/main/Style_Transfer_CNN.pdf"
+      tagline: "Neural artistic style transfer using convolutional neural networks in PyTorch."
+
+    - title: "ML/DL Implementations"
+      link: "https://github.com/FranciscoPark/DS_Portfolio/tree/main/mldl"
+      tagline: "Core deep learning architectures built from scratch: 2NN, CNN, KNN, RNN, Seq2Seq, and Vision Transformer (ViT)."
+
+    - title: "KSPI NLP Competition"
+      link: "https://github.com/FranciscoPark/DS_Portfolio/tree/main/industrial_classifcation_kostra"
+      tagline: "Korean industrial classification using pre-trained models (KoBigBird, KoELECTRA, KoBERT) with ensemble inference."
+
+    - title: "RAG with LangChain"
+      link: "https://github.com/FranciscoPark/BKMS2"
+      tagline: "Retrieval-Augmented Generation pipeline: PDF → vector database → LLM QnA using LangChain. Group project."
+
+    - title: "RL Mini-Metro"
+      link: "https://github.com/FranciscoPark/rl_mini_metro"
+      tagline: "Deep Q-Network (DQN) agent trained to play the Mini-Metro game. Group project."
+
+    - title: "League of Legends EDA"
+      link: "https://github.com/FranciscoPark/lol_champs"
+      tagline: "Exploratory data analysis and visualization of LoL champion statistics using R and ggplot2."
+
+    - title: "K-Means Clustering"
+      link: "https://github.com/FranciscoPark/DS_Portfolio/blob/main/K_Means.ipynb"
+      tagline: "K-means clustering on the IRIS dataset using scikit-learn."
+
+skills:
+  title: Skills
+  toolset:
+    - name: Python
+      level: 95%
+    - name: PyTorch
+      level: 90%
+    - name: scikit-learn
+      level: 85%
+    - name: YOLOv8 / Ultralytics
+      level: 80%
+    - name: LangChain
+      level: 75%
+    - name: R
+      level: 70%
+    - name: Jupyter
+      level: 95%
+    - name: Git
+      level: 80%
+
+footer: >
+  Francisco Park

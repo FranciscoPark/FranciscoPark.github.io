@@ -1,0 +1,9 @@
+repository: FranciscoPark/FranciscoPark.github.io
+
+remote_theme: sharu725/online-cv
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+exclude: [vendor]

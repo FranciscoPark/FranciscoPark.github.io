@@ -140,10 +140,20 @@
     .pub-venue   { font-size: 0.78em; color: #5bafd6; margin-top: 3px; }
 
     /* projects */
+    .cat-heading {
+      font-size: 0.78em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #5bafd6;
+      margin: 20px 0 10px;
+      font-weight: 600;
+    }
+    .cat-heading:first-of-type { margin-top: 0; }
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 14px;
+      gap: 12px;
+      margin-bottom: 6px;
     }
     .project-card {
       background: #fff;
@@ -308,14 +318,21 @@
   {% if d.projects %}
   <section>
     <h2>{{ d.projects.title }}</h2>
-    <div class="project-grid">
-      {% for project in d.projects.assignments %}
-      <div class="project-card">
-        <h4><a href="{{ project.link }}" target="_blank">{{ project.title }}</a></h4>
-        <p>{{ project.tagline }}</p>
+    {% assign cat_order = "LLM,Vision,RL,DataScience" | split: "," %}
+    {% for cat in cat_order %}
+      {% assign cat_projects = d.projects.assignments | where: "category", cat %}
+      {% if cat_projects.size > 0 %}
+      <p class="cat-heading">{{ cat }}</p>
+      <div class="project-grid">
+        {% for project in cat_projects %}
+        <div class="project-card">
+          <h4><a href="{{ project.link }}" target="_blank">{{ project.title }}</a></h4>
+          <p>{{ project.tagline }}</p>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
+      {% endif %}
+    {% endfor %}
   </section>
   {% endif %}
 

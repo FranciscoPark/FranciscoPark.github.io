@@ -37,20 +37,27 @@ career-profile:
 education:
   title: Education
   info:
-    - degree: "[Your Degree — e.g. B.S. / M.S. in Computer Science]"
-      university: "[Your University]"
-      time: "[Start Year] - [End Year]"
+    - degree: M.S. in Data Science
+      university: Seoul National University
+      time: 2023 - 2025
       details: |
-        [Add relevant coursework, thesis topic, or GPA if applicable.]
+        Graduate research in machine learning and data science.
+
+    - degree: B.S. in Applied Statistics, Minor in Economics
+      university: Yonsei University
+      time: 2017 - 2023
+      details: |
+        Major in Applied Statistics with a minor in Economics.
 
 experiences:
   title: Experience
   info:
-    - role: "[Your Role — e.g. Research Intern]"
-      time: "[Start] - [End]"
-      company: "[Company or Lab], [Location]"
+    - role: AI Engineer
+      time: 2026.01 - Present
+      company: Hanwha Systems, Seoul
       details: |
-        [Describe your responsibilities and key contributions.]
+        Designing and developing LLM agent systems for enterprise applications.
+        Leading LLM agent architecture projects including prompt engineering, tool use, and multi-agent pipeline design.
 
 publications:
   title: Publications
@@ -77,37 +84,45 @@ projects:
   intro: >
     Selected projects in Computer Vision, NLP, Reinforcement Learning, and Generative AI.
   assignments:
-    - title: "SurAI — Tennis Court Detection"
-      link: "https://github.com/FranciscoPark/SurAI"
-      tagline: "Amateur tennis court and ball detection using YOLOv8 and PyTorch. Includes 2NN, CNN, KNN, RNN, Seq2Seq, and ViT implementations."
-
-    - title: "Style Transfer CNN"
-      link: "https://github.com/FranciscoPark/DS_Portfolio/blob/main/Style_Transfer_CNN.pdf"
-      tagline: "Neural artistic style transfer using convolutional neural networks in PyTorch."
-
-    - title: "ML/DL Implementations"
-      link: "https://github.com/FranciscoPark/DS_Portfolio/tree/main/mldl"
-      tagline: "Core deep learning architectures built from scratch: 2NN, CNN, KNN, RNN, Seq2Seq, and Vision Transformer (ViT)."
+    - title: "RAG with LangChain"
+      link: "https://github.com/FranciscoPark/BKMS2"
+      tagline: "Retrieval-Augmented Generation pipeline: PDF → vector database → LLM QnA using LangChain. Group project."
+      category: LLM
 
     - title: "KSPI NLP Competition"
       link: "https://github.com/FranciscoPark/DS_Portfolio/tree/main/industrial_classifcation_kostra"
       tagline: "Korean industrial classification using pre-trained models (KoBigBird, KoELECTRA, KoBERT) with ensemble inference."
+      category: LLM
 
-    - title: "RAG with LangChain"
-      link: "https://github.com/FranciscoPark/BKMS2"
-      tagline: "Retrieval-Augmented Generation pipeline: PDF → vector database → LLM QnA using LangChain. Group project."
+    - title: "SurAI — Tennis Court Detection"
+      link: "https://github.com/FranciscoPark/SurAI"
+      tagline: "Amateur tennis court and ball detection using YOLOv8 and PyTorch."
+      category: Vision
+
+    - title: "Style Transfer CNN"
+      link: "https://github.com/FranciscoPark/DS_Portfolio/blob/main/Style_Transfer_CNN.pdf"
+      tagline: "Neural artistic style transfer using convolutional neural networks in PyTorch."
+      category: Vision
+
+    - title: "ML/DL Implementations"
+      link: "https://github.com/FranciscoPark/DS_Portfolio/tree/main/mldl"
+      tagline: "Core deep learning architectures built from scratch: 2NN, CNN, KNN, RNN, Seq2Seq, and Vision Transformer (ViT)."
+      category: Vision
 
     - title: "RL Mini-Metro"
       link: "https://github.com/FranciscoPark/rl_mini_metro"
       tagline: "Deep Q-Network (DQN) agent trained to play the Mini-Metro game. Group project."
+      category: RL
 
     - title: "League of Legends EDA"
       link: "https://github.com/FranciscoPark/lol_champs"
       tagline: "Exploratory data analysis and visualization of LoL champion statistics using R and ggplot2."
+      category: DataScience
 
     - title: "K-Means Clustering"
       link: "https://github.com/FranciscoPark/DS_Portfolio/blob/main/K_Means.ipynb"
       tagline: "K-means clustering on the IRIS dataset using scikit-learn."
+      category: DataScience
 
 skills:
   title: Skills

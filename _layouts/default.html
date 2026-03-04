@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.data.data.sidebar.name }} — {{ site.data.data.sidebar.tagline }}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+      background: #f4f6f8;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 290px;
+      min-width: 290px;
+      background: #1e2d3d;
+      color: #cdd6e0;
+      padding: 36px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .sidebar h1 {
+      font-size: 1.4em;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .sidebar .tagline {
+      font-size: 0.82em;
+      color: #7fa3c0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .sidebar .divider {
+      border: none;
+      border-top: 1px solid #2d4155;
+    }
+
+    .sidebar section h3 {
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #7fa3c0;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a { color: #5bafd6; text-decoration: none; }
+    .sidebar a:hover { color: #fff; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 7px;
+      font-size: 0.85em;
+    }
+    .contact-item i { width: 14px; text-align: center; color: #7fa3c0; }
+
+    .tag-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .tag-list span {
+      font-size: 0.82em;
+      color: #cdd6e0;
+    }
+    .tag-list .sub { color: #7fa3c0; font-size: 0.78em; }
+
+    /* skill bars */
+    .skill-item { margin-bottom: 11px; }
+    .skill-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8em;
+      margin-bottom: 4px;
+      color: #cdd6e0;
+    }
+    .skill-label span:last-child { color: #7fa3c0; }
+    .bar-track { background: #2d4155; height: 4px; border-radius: 2px; }
+    .bar-fill  { background: #5bafd6; height: 4px; border-radius: 2px; }
+
+    /* ── MAIN ── */
+    .main {
+      flex: 1;
+      padding: 40px 48px;
+      max-width: 860px;
+    }
+
+    .main section { margin-bottom: 38px; }
+
+    .main h2 {
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #1e2d3d;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #5bafd6;
+      margin-bottom: 18px;
+    }
+
+    /* about */
+    .about-text { line-height: 1.8; color: #555; }
+
+    /* publications */
+    .pub-item {
+      padding: 12px 14px;
+      border-left: 3px solid #5bafd6;
+      margin-bottom: 16px;
+      background: #fff;
+      border-radius: 0 4px 4px 0;
+    }
+    .pub-title a {
+      font-weight: 600;
+      color: #1e2d3d;
+      text-decoration: none;
+      font-size: 0.93em;
+      line-height: 1.4;
+    }
+    .pub-title a:hover { color: #5bafd6; }
+    .pub-authors { font-size: 0.78em; color: #888; margin-top: 4px; }
+    .pub-venue   { font-size: 0.78em; color: #5bafd6; margin-top: 3px; }
+
+    /* projects */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .project-card {
+      background: #fff;
+      border: 1px solid #e2e8ef;
+      border-radius: 6px;
+      padding: 14px 16px;
+    }
+    .project-card h4 { font-size: 0.88em; margin-bottom: 5px; }
+    .project-card h4 a { color: #1e2d3d; text-decoration: none; }
+    .project-card h4 a:hover { color: #5bafd6; }
+    .project-card p { font-size: 0.78em; color: #777; line-height: 1.55; }
+
+    /* experience / education */
+    .timeline-item { margin-bottom: 22px; }
+    .timeline-item h4 { font-size: 0.95em; color: #1e2d3d; font-weight: 600; }
+    .timeline-meta { font-size: 0.8em; color: #888; margin: 3px 0 6px; }
+    .timeline-item p { font-size: 0.85em; color: #666; line-height: 1.65; }
+    .placeholder-box {
+      font-style: italic;
+      color: #bbb;
+      font-size: 0.82em;
+      border: 1px dashed #ddd;
+      border-radius: 4px;
+      padding: 8px 12px;
+    }
+
+    /* responsive */
+    @media (max-width: 720px) {
+      body { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: relative; }
+      .main { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+{% assign d = site.data.data %}
+
+<!-- LEFT SIDEBAR -->
+<aside class="sidebar">
+
+  <div>
+    <h1>{{ d.sidebar.name }}</h1>
+    <p class="tagline">{{ d.sidebar.tagline }}</p>
+  </div>
+
+  <hr class="divider">
+
+  <section>
+    <h3>Contact</h3>
+    {% if d.sidebar.linkedin %}
+    <div class="contact-item">
+      <i class="fab fa-linkedin"></i>
+      <a href="https://linkedin.com/in/{{ d.sidebar.linkedin }}" target="_blank">LinkedIn</a>
+    </div>
+    {% endif %}
+    {% if d.sidebar.github %}
+    <div class="contact-item">
+      <i class="fab fa-github"></i>
+      <a href="https://github.com/{{ d.sidebar.github }}" target="_blank">{{ d.sidebar.github }}</a>
+    </div>
+    {% endif %}
+    {% if d.sidebar.email and d.sidebar.email != "" %}
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:{{ d.sidebar.email }}">{{ d.sidebar.email }}</a>
+    </div>
+    {% endif %}
+  </section>
+
+  {% if d.sidebar.languages %}
+  <section>
+    <h3>{{ d.sidebar.languages.title }}</h3>
+    <div class="tag-list">
+      {% for lang in d.sidebar.languages.info %}
+      <span>{{ lang.idiom }} <span class="sub">— {{ lang.level }}</span></span>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if d.sidebar.interests %}
+  <section>
+    <h3>{{ d.sidebar.interests.title }}</h3>
+    <div class="tag-list">
+      {% for interest in d.sidebar.interests.info %}
+      <span>{{ interest.item }}</span>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if d.skills %}
+  <section>
+    <h3>{{ d.skills.title }}</h3>
+    {% for skill in d.skills.toolset %}
+    <div class="skill-item">
+      <div class="skill-label">
+        <span>{{ skill.name }}</span>
+        <span>{{ skill.level }}</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:{{ skill.level }}"></div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  {% assign cp = site.data.data["career-profile"] %}
+  {% if cp %}
+  <section>
+    <h2>{{ cp.title }}</h2>
+    <p class="about-text">{{ cp.summary }}</p>
+  </section>
+  {% endif %}
+
+  {% if d.publications %}
+  <section>
+    <h2>{{ d.publications.title }}</h2>
+    {% for paper in d.publications.papers %}
+    <div class="pub-item">
+      <div class="pub-title"><a href="{{ paper.link }}" target="_blank">{{ paper.title }}</a></div>
+      <div class="pub-authors">{{ paper.authors }}</div>
+      <div class="pub-venue">{{ paper.conference }}</div>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if d.experiences %}
+  <section>
+    <h2>{{ d.experiences.title }}</h2>
+    {% for exp in d.experiences.info %}
+    <div class="timeline-item">
+      <h4>{{ exp.role }}</h4>
+      <div class="timeline-meta">{{ exp.company }} &middot; {{ exp.time }}</div>
+      <p>{{ exp.details }}</p>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if d.education %}
+  <section>
+    <h2>{{ d.education.title }}</h2>
+    {% for edu in d.education.info %}
+    <div class="timeline-item">
+      <h4>{{ edu.degree }}</h4>
+      <div class="timeline-meta">{{ edu.university }} &middot; {{ edu.time }}</div>
+      <p>{{ edu.details }}</p>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if d.projects %}
+  <section>
+    <h2>{{ d.projects.title }}</h2>
+    <div class="project-grid">
+      {% for project in d.projects.assignments %}
+      <div class="project-card">
+        <h4><a href="{{ project.link }}" target="_blank">{{ project.title }}</a></h4>
+        <p>{{ project.tagline }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+</main>
+
+</body>
+</html>

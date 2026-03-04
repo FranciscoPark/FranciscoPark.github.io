@@ -1,9 +1,7 @@
-repository: FranciscoPark/FranciscoPark.github.io
-
-remote_theme: sharu725/online-cv
+title: Francisco Park
+description: AI/ML Researcher
 
 plugins:
-  - jekyll-remote-theme
   - jekyll-seo-tag
 
-exclude: [vendor]
+exclude: [vendor, Gemfile, Gemfile.lock, README.md]

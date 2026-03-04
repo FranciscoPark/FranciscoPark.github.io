@@ -18,6 +18,8 @@ sidebar:
         level: Native
       - idiom: English
         level: Professional
+      - idiom: Chinese
+        level: Professional
 
   interests:
     title: Interests

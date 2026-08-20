@@ -138,6 +138,7 @@
     .pub-title a:hover { color: #5bafd6; }
     .pub-authors { font-size: 0.78em; color: #888; margin-top: 4px; }
     .pub-venue   { font-size: 0.78em; color: #5bafd6; margin-top: 3px; }
+    .pub-description { font-size: 0.82em; color: #666; line-height: 1.55; margin-top: 7px; }
 
     /* research highlights */
     .research-item {
@@ -311,6 +312,7 @@
       </div>
       <div class="pub-authors">{{ paper.authors }}</div>
       <div class="pub-venue">{{ paper.conference }}</div>
+      {% if paper.description %}<div class="pub-description">{{ paper.description }}</div>{% endif %}
     </div>
     {% endfor %}
   </section>
@@ -345,7 +347,7 @@
   {% if d.projects %}
   <section>
     <h2>{{ d.projects.title }}</h2>
-    {% assign cat_order = "AI Agents,Vision,Foundations,Reinforcement Learning" | split: "," %}
+    {% assign cat_order = "AI Agents,Vision,Foundations,Reinforcement Learning,Data Science" | split: "," %}
     {% for cat in cat_order %}
       {% assign cat_projects = d.projects.assignments | where: "category", cat %}
       {% if cat_projects.size > 0 %}

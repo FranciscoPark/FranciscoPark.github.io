@@ -79,24 +79,29 @@ publications:
   papers:
     - title: "TRONTOR: To RoPE or Not to RoPE for Long-Context Modeling"
       link: "#"
-      authors: Jongyeon Park et al.
-      conference: "EMNLP 2026 submission · Long-context modeling"
+      authors: Jongyeon Park
+      conference: "EMNLP 2026 submission · First author"
+      description: A lightweight head-wise router dynamically selects RoPE or NoPE to improve long-context modeling while reducing inference cost.
     - title: "Constructing Thunder Korean Benchmark Suite for Reliable Evaluation of Foundation Models"
-      link: "#"
-      authors: Jongyeon Park et al.
+      link: "https://openreview.net/forum?id=oJ3rhISSqO"
+      authors: Yeonkyoung So, Jongmin Kim, Sungmok Jung, Gyuseong Lee, Sangho Kim, Jongyeon Park, Joonhak Lee, Seho Pyo, Gyeongje Cho, Seorin Kim, Jisoo Kim, Suyoung Park, Hyunji M. Park, Yelim Ahn, Yeongho Seo, Jaejin Lee
       conference: "ICML 2026 Workshop · Accepted"
+      description: A Korean benchmark suite covering knowledge, reasoning, contextual understanding, and instruction following across 9,396 items.
     - title: "Beyond Line-Level Filtering for the Pretraining Corpora of LLMs"
-      link: "#"
-      authors: Jongyeon Park et al.
+      link: "https://arxiv.org/abs/2510.24139"
+      authors: Chanwoo Park, Suyoung Park, Yelim Ahn, Jongmin Kim, Jongyeon Park, Jaejin Lee
       conference: "ACL ARR 2026 submission · Pretraining data quality"
+      description: Pattern-aware deduplication and punctuation filtering that preserve structurally valuable content in LLM pretraining corpora.
     - title: "Ko-MuSR: A Multistep Soft Reasoning Benchmark for LLMs Capable of Understanding Korean"
-      link: "#"
-      authors: Jongyeon Park et al.
+      link: "https://arxiv.org/abs/2510.24150"
+      authors: Chanwoo Park, Suyoung Park, JiA Kang, Jongyeon Park, Sangho Kim, Hyunji M. Park, Sumin Bae, Mingyu Kang, Jaejin Lee
       conference: "ACL ARR submission · Korean reasoning evaluation"
+      description: A Korean multistep reasoning benchmark using soft evaluation to measure long-form, informal reasoning more reliably.
     - title: "Models Know Models Best: Evaluation via Model-Preferred Formats"
-      link: "#"
+      link: "https://arxiv.org/abs/2601.22699"
       authors: Joonhak Lee, Sungmok Jung, Jongyeon Park, Jaejin Lee
       conference: "2026 · LLM evaluation"
+      description: A model-aware evaluator chooses between symbol and cloze answer formats to improve multiple-choice LLM evaluation.
 
 projects:
   title: Selected projects
@@ -113,9 +118,17 @@ projects:
       link: "https://github.com/FranciscoPark/BKMS2"
       tagline: PDF-to-vector-database question answering pipeline built with LangChain.
       category: AI Agents
+    - title: KSPI NLP Competition
+      link: "https://github.com/FranciscoPark/DS_Portfolio/tree/main/industrial_classifcation_kostra"
+      tagline: Korean industrial classification using KoBigBird, KoELECTRA, and KoBERT with ensemble inference.
+      category: AI Agents
     - title: SurAI — Tennis Court Detection
       link: "https://github.com/FranciscoPark/SurAI"
       tagline: Amateur tennis court and ball detection using YOLOv8 and PyTorch.
+      category: Vision
+    - title: Style Transfer CNN
+      link: "https://github.com/FranciscoPark/DS_Portfolio/blob/main/Style_Transfer_CNN.pdf"
+      tagline: Neural artistic style transfer using convolutional neural networks in PyTorch.
       category: Vision
     - title: ML/DL Implementations
       link: "https://github.com/FranciscoPark/DS_Portfolio/tree/main/mldl"
@@ -125,6 +138,14 @@ projects:
       link: "https://github.com/FranciscoPark/rl_mini_metro"
       tagline: Deep Q-Network agent trained to play Mini Metro.
       category: Reinforcement Learning
+    - title: League of Legends EDA
+      link: "https://github.com/FranciscoPark/lol_champs"
+      tagline: Exploratory data analysis and visualization of League of Legends champion statistics using R and ggplot2.
+      category: Data Science
+    - title: K-Means Clustering
+      link: "https://github.com/FranciscoPark/DS_Portfolio/blob/main/K_Means.ipynb"
+      tagline: K-means clustering on the IRIS dataset using scikit-learn.
+      category: Data Science
 
 skills:
   title: Technical toolkit

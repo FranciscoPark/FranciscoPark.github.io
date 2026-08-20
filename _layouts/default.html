@@ -139,6 +139,18 @@
     .pub-authors { font-size: 0.78em; color: #888; margin-top: 4px; }
     .pub-venue   { font-size: 0.78em; color: #5bafd6; margin-top: 3px; }
 
+    /* research highlights */
+    .research-item {
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      background: #eef7fb;
+      border: 1px solid #d6eaf3;
+      border-radius: 6px;
+    }
+    .research-item h4 { color: #1e2d3d; font-size: 0.93em; margin-bottom: 4px; }
+    .research-meta { color: #5bafd6; font-size: 0.78em; margin-bottom: 6px; }
+    .research-item p { color: #666; font-size: 0.82em; line-height: 1.6; }
+
     /* projects */
     .cat-heading {
       font-size: 0.78em;
@@ -276,12 +288,27 @@
   </section>
   {% endif %}
 
+  {% if d.research %}
+  <section>
+    <h2>{{ d.research.title }}</h2>
+    {% for item in d.research.items %}
+    <div class="research-item">
+      <h4>{{ item.title }}</h4>
+      <div class="research-meta">{{ item.meta }}</div>
+      <p>{{ item.details }}</p>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
   {% if d.publications %}
   <section>
     <h2>{{ d.publications.title }}</h2>
     {% for paper in d.publications.papers %}
     <div class="pub-item">
-      <div class="pub-title"><a href="{{ paper.link }}" target="_blank">{{ paper.title }}</a></div>
+      <div class="pub-title">
+        {% if paper.link and paper.link != "#" %}<a href="{{ paper.link }}" target="_blank">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}
+      </div>
       <div class="pub-authors">{{ paper.authors }}</div>
       <div class="pub-venue">{{ paper.conference }}</div>
     </div>
@@ -318,7 +345,7 @@
   {% if d.projects %}
   <section>
     <h2>{{ d.projects.title }}</h2>
-    {% assign cat_order = "LLM,Vision,RL,DataScience" | split: "," %}
+    {% assign cat_order = "AI Agents,Vision,Foundations,Reinforcement Learning" | split: "," %}
     {% for cat in cat_order %}
       {% assign cat_projects = d.projects.assignments | where: "category", cat %}
       {% if cat_projects.size > 0 %}

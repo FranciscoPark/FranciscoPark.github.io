@@ -1,15 +1,9 @@
 sidebar:
-  about: False
-  education: True
-
-  name: Francisco Park
-  tagline: AI/ML Researcher
-  avatar: profile.png
-
-  # Sidebar links
-  email:
+  name: Jongyeon Park
+  tagline: AI Engineer · LLM Researcher
   linkedin: jypark-3672b3201
   github: FranciscoPark
+  email: happyfran67@gmail.com
 
   languages:
     title: Languages
@@ -17,134 +11,135 @@ sidebar:
       - idiom: Korean
         level: Native
       - idiom: English
-        level: Professional
+        level: OPIc AL
       - idiom: Chinese
-        level: Professional
+        level: Conversational
 
   interests:
-    title: Interests
+    title: Research interests
     info:
-      - item: Large Language Models
-      - item: Computer Vision
-      - item: Natural Language Processing
-      - item: Reinforcement Learning
+      - item: Long-context modeling
+      - item: Pretraining data quality
+      - item: AI agents & RAG
+      - item: Reliable evaluation
 
 career-profile:
-  title: About
+  title: Profile
   summary: |
-    AI/ML Researcher with hands-on experience in Computer Vision, Natural Language Processing,
-    Reinforcement Learning, and Generative AI. Focused on building and evaluating modern deep
-    learning systems — from pretraining data pipelines to benchmark design and model evaluation.
+    AI Engineer and LLM researcher working across the full model and service lifecycle: collecting and refining data, pretraining, post-training, evaluation, and production delivery. At Hanwha Systems, I build domain-specific AI agents and data pipelines for enterprise decision support. Previously, at SNU Thunder Lab, I contributed to Korean-English LLM development, long-context modeling, Korean evaluation benchmarks, and privacy-preserving NLP. I enjoy turning questions about what “should” work into measurable improvements in real systems.
+
+experiences:
+  title: Experience
+  info:
+    - role: AI Engineer · AI Agent & Data Pipeline
+      time: Jan 2026 – Present
+      company: Hanwha Systems ICT · Seoul, Korea
+      details: |
+        Building production AI transformation systems for a solar energy company and a shipbuilding company. Designed Databricks-based pipelines for API/RPA collection, deduplication, LLM filtering, and database loading; developed RAG + CoT report agents and newsletter delivery jobs; and built canonical-block parsers for PDF, PPTX, XLS, and XLSX documents. Also designing ontology and knowledge-layer components that help agents reason over shipyard process-risk and digital-twin data.
+
+    - role: AI/ML Researcher · CHAMP Project
+      time: Sep 2024 – Dec 2025
+      company: SNU Thunder Lab · Seoul, Korea
+      details: |
+        Contributed to the Korean-English Thunder LLM pipeline, from 3TB-scale web data collection and refinement to tokenizer design, SFT, DPO, and distributed inference. Built Korean instruction data, optimized inference with double buffering and two-stage batching, and improved GPU efficiency by 30% in project benchmarks. Research contributions included TRONTOR, Korean evaluation benchmarks, pretraining-data filtering, and court-judgment de-identification.
+
+    - role: Developer Training Program
+      time: Mar 2022 – Sep 2022
+      company: En-CORE Academy
+      details: |
+        Completed a 960-hour program covering Python, machine learning, big-data processing, IoT, and autonomous-driving algorithms.
 
 education:
   title: Education
   info:
     - degree: M.S. in Data Science
       university: Seoul National University
-      time: 2023 - 2025
-      details: |
-        Graduate research in machine learning and data science.
-
-    - degree: B.S. in Applied Statistics, Minor in Economics
+      time: Sep 2023 – Mar 2026
+      details: Graduate research focused on large language models, long-context modeling, evaluation, and data quality.
+    - degree: B.S. in Applied Statistics · Minor in Economics
       university: Yonsei University
-      time: 2017 - 2023
-      details: |
-        Major in Applied Statistics with a minor in Economics.
+      time: Mar 2017 – Feb 2023
+      details: Training in statistical modeling, quantitative analysis, and economic reasoning.
 
-experiences:
-  title: Experience
-  info:
-    - role: AI Engineer
-      time: 2026.01 - Present
-      company: Hanwha Systems, Seoul
-      details: |
-        Designing and developing LLM agent systems for enterprise applications.
-        Leading LLM agent architecture projects including prompt engineering, tool use, and multi-agent pipeline design.
+research:
+  title: Research highlights
+  items:
+    - title: "TRONTOR: To RoPE or Not to RoPE for Long-Context Modeling"
+      meta: First author · EMNLP 2026 submission
+      details: A lightweight head-wise router dynamically selects RoPE or NoPE to reduce attention decay in long contexts, improving RULER performance while accelerating inference by more than 10%.
+    - title: Llama-Thunder-LLM
+      meta: SNU Thunder Lab · CHAMP
+      details: Korean-English foundation-model development spanning 3TB web-data refinement, Thunder-Tok tokenizer design, Korean SFT data generation, DPO, and distributed inference optimization.
+    - title: SNU Thunder-DeID
+      meta: Research & project
+      details: Built annotation guidelines, training data, and NER-based detection and type classification for automatic privacy de-identification of Korean court judgments.
 
 publications:
-  title: Publications
-  intro: |
-    Research in large language model evaluation, Korean NLP, and pretraining data quality.
+  title: Publications & submissions
   papers:
-    - title: "Ko-MuSR: A Multistep Soft Reasoning Benchmark for LLMs Capable of Understanding Korean"
-      link: "https://arxiv.org/abs/2510.24150"
-      authors: Chanwoo Park, Suyoung Park, JiA Kang, Jongyeon Park, Sangho Kim, Hyunji M. Park, Sumin Bae, Mingyu Kang, Jaejin Lee
-      conference: "arXiv, 2025 — Korean multistep reasoning benchmark; multilingual models outperform Korean-specialized ones; prompting strategies significantly improve accuracy."
-
+    - title: "TRONTOR: To RoPE or Not to RoPE for Long-Context Modeling"
+      link: "#"
+      authors: Jongyeon Park et al.
+      conference: "EMNLP 2026 submission · Long-context modeling"
+    - title: "Constructing Thunder Korean Benchmark Suite for Reliable Evaluation of Foundation Models"
+      link: "#"
+      authors: Jongyeon Park et al.
+      conference: "ICML 2026 Workshop · Accepted"
     - title: "Beyond Line-Level Filtering for the Pretraining Corpora of LLMs"
-      link: "https://arxiv.org/abs/2510.24139"
-      authors: Chanwoo Park, Suyoung Park, Yelim Ahn, Jongmin Kim, Jongyeon Park, Jaejin Lee
-      conference: "arXiv, 2025 — Pattern-aware deduplication and punctuation filtering that preserve structurally valuable content and improve 1B-parameter LLM benchmark scores."
-
+      link: "#"
+      authors: Jongyeon Park et al.
+      conference: "ACL ARR 2026 submission · Pretraining data quality"
+    - title: "Ko-MuSR: A Multistep Soft Reasoning Benchmark for LLMs Capable of Understanding Korean"
+      link: "#"
+      authors: Jongyeon Park et al.
+      conference: "ACL ARR submission · Korean reasoning evaluation"
     - title: "Models Know Models Best: Evaluation via Model-Preferred Formats"
-      link: "https://arxiv.org/abs/2601.22699"
+      link: "#"
       authors: Joonhak Lee, Sungmok Jung, Jongyeon Park, Jaejin Lee
-      conference: "arXiv, 2026 — Dynamic symbol-vs-cloze format selection for multiple-choice LLM evaluation using a lightweight classifier; consistent gains across reasoning and knowledge benchmarks."
+      conference: "2026 · LLM evaluation"
 
 projects:
-  title: Projects
-  intro: >
-    Selected projects in Computer Vision, NLP, Reinforcement Learning, and Generative AI.
+  title: Selected projects
   assignments:
-    - title: "RAG with LangChain"
+    - title: Market Intelligence Agent
+      link: "#"
+      tagline: Production report-generation system combining web collection, Databricks data refinement, Vector Search RAG, and CoT-based analysis.
+      category: AI Agents
+    - title: Shipyard Process-Risk Knowledge Layer
+      link: "#"
+      tagline: Ontology and knowledge-layer design for connecting shipyard process, equipment, materials, and digital-twin data to natural-language agent workflows.
+      category: AI Agents
+    - title: RAG with LangChain
       link: "https://github.com/FranciscoPark/BKMS2"
-      tagline: "Retrieval-Augmented Generation pipeline: PDF → vector database → LLM QnA using LangChain. Group project."
-      category: LLM
-
-    - title: "KSPI NLP Competition"
-      link: "https://github.com/FranciscoPark/DS_Portfolio/tree/main/industrial_classifcation_kostra"
-      tagline: "Korean industrial classification using pre-trained models (KoBigBird, KoELECTRA, KoBERT) with ensemble inference."
-      category: LLM
-
-    - title: "SurAI — Tennis Court Detection"
+      tagline: PDF-to-vector-database question answering pipeline built with LangChain.
+      category: AI Agents
+    - title: SurAI — Tennis Court Detection
       link: "https://github.com/FranciscoPark/SurAI"
-      tagline: "Amateur tennis court and ball detection using YOLOv8 and PyTorch."
+      tagline: Amateur tennis court and ball detection using YOLOv8 and PyTorch.
       category: Vision
-
-    - title: "Style Transfer CNN"
-      link: "https://github.com/FranciscoPark/DS_Portfolio/blob/main/Style_Transfer_CNN.pdf"
-      tagline: "Neural artistic style transfer using convolutional neural networks in PyTorch."
-      category: Vision
-
-    - title: "ML/DL Implementations"
+    - title: ML/DL Implementations
       link: "https://github.com/FranciscoPark/DS_Portfolio/tree/main/mldl"
-      tagline: "Core deep learning architectures built from scratch: 2NN, CNN, KNN, RNN, Seq2Seq, and Vision Transformer (ViT)."
-      category: Vision
-
-    - title: "RL Mini-Metro"
+      tagline: From-scratch implementations of CNN, RNN, Seq2Seq, ViT, KNN, and related models.
+      category: Foundations
+    - title: RL Mini-Metro
       link: "https://github.com/FranciscoPark/rl_mini_metro"
-      tagline: "Deep Q-Network (DQN) agent trained to play the Mini-Metro game. Group project."
-      category: RL
-
-    - title: "League of Legends EDA"
-      link: "https://github.com/FranciscoPark/lol_champs"
-      tagline: "Exploratory data analysis and visualization of LoL champion statistics using R and ggplot2."
-      category: DataScience
-
-    - title: "K-Means Clustering"
-      link: "https://github.com/FranciscoPark/DS_Portfolio/blob/main/K_Means.ipynb"
-      tagline: "K-means clustering on the IRIS dataset using scikit-learn."
-      category: DataScience
+      tagline: Deep Q-Network agent trained to play Mini Metro.
+      category: Reinforcement Learning
 
 skills:
-  title: Skills
+  title: Technical toolkit
   toolset:
-    - name: Python
+    - name: Python · PyTorch · Hugging Face
       level: 95%
-    - name: PyTorch
-      level: 90%
-    - name: scikit-learn
+    - name: LLMs · RAG · CoT · SFT · DPO · LoRA
+      level: 92%
+    - name: Databricks · FastAPI · MongoDB
+      level: 82%
+    - name: vLLM · DeepSpeed · Slurm · CUDA
+      level: 80%
+    - name: Kubernetes · Docker · Git
+      level: 78%
+    - name: Statistical modeling · EDA · RL
       level: 85%
-    - name: YOLOv8 / Ultralytics
-      level: 80%
-    - name: LangChain
-      level: 75%
-    - name: R
-      level: 70%
-    - name: Jupyter
-      level: 95%
-    - name: Git
-      level: 80%
 
-footer: >
-  Francisco Park
+footer: Jongyeon Park
